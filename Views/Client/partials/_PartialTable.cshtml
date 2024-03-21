@@ -1,0 +1,42 @@
+@model List<DizonCoop.Entities.ClientInfo>
+
+
+<table id="example" class="table table-striped" style="width:100%">
+  <thead class="bg-dark">
+    <tr class="text-white">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Age</th>
+      <th>Civil Status</th>
+      <th>User type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Nicole Franz Dizon</td>
+      <td>07/26/2001</td>
+      <td>22</td>
+      <td>Single</td>
+      <td>Admin</td>
+      <td>
+        <input type="button" value="View" class="btn btn-primary">
+        <input type="button" value="Edit" class="btn btn-warning">
+        <input type="button" value="Delete" class="btn btn-danger">
+      </td>
+    </tr>
+  </tbody>
+  <tfoot class="bg-dark">
+    <tr class="text-white">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Age</th>
+      <th>Civil Status</th>
+      <th>User type</th>
+      <th>Action</th>
+    </tr>
+  </tfoot>
+</table>

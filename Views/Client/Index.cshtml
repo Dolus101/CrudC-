@@ -1,0 +1,25 @@
+
+<link href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<h3>Cleint List</h3>
+
+<br>
+<!-- btn open modal add client -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Addclient"> Add Client </button>
+
+<!-- Client add Modal -->
+
+<!-- Modal add client close -->
+
+
+@Html.Partial("partials/_PartialTable")
+@Html.Partial("partials/_ModalCreate")
+
+
+
+@section scripts {
+  <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="~/js/main.js"></script>
+}
