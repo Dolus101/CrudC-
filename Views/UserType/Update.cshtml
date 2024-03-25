@@ -1,0 +1,23 @@
+@model DizonCoop.Entities.UserType
+
+
+<div class="card mx-auto" style="width: 18rem;">
+  <h4 class="text-center mt-3">Update User Type</h4>
+  <hr>
+  <div class="card-body">
+<form asp-action="Update" method="post">
+    
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Update</button>
+
+
+</form>
+  </div>
+</div>

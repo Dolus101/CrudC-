@@ -2,3 +2,6 @@
 //     alert('ok');
 // })
 new DataTable('#example');
+
+
+

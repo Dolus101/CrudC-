@@ -1,0 +1,101 @@
+@model IEnumerable<DizonCoop.Entities.UserType>
+@* <link href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css" rel="stylesheet"> *@
+<link rel="stylesheet" href="css/style.css">
+<h3>Cleint List</h3>
+
+<br>
+<!-- btn open modal add client -->
+<a class="btn btn-success" href="/UserType/Create">  Add User Type </a>
+
+<!-- Client add Modal -->
+
+<!-- Modal add client close -->
+
+<style>
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+td.editable {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>
+
+
+<<table id="example" class="table table-striped" style="width:75%">
+  <thead class="bg-dark">
+    <tr class="text-white">
+      <th>Id</th>
+      <th>User Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach(var userType in Model){
+    <tr> 
+      <td class="col editable">@userType.Id</td>
+      <td class="col-5 editable">@userType.Name</td>
+      <td>
+        <a href="/UserType/update/@userType.Id" class="btn btn-warning"> Edit </a>
+        <a href="/UserType/Delete/@userType.Id" class="btn btn-danger"> Delete </a>
+      </td>
+    </tr>
+    }
+  </tbody>
+  <tfoot class="bg-dark">
+    <tr class="text-white">
+      <th>Id</th>
+      <th>User Type</th>
+      <th>Action</th>
+    </tr>
+  </tfoot>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('#example td.editable').on('click', function() {
+    var $cell = $(this);
+    var initialValue = $cell.text().trim();
+    
+    // Create an input field with the initial value
+    var $input = $('<input type="text">').val(initialValue);
+    
+    // Replace the cell's content with the input field
+    $cell.html($input);
+    
+    // Focus on the input field and select its content
+    $input.focus().select();
+    
+    // Handle blur event (when focus moves out of input)
+    $input.on('blur', function() {
+      var newValue = $(this).val().trim();
+      // Update cell with new value if it's different
+      if(newValue !== initialValue) {
+        $cell.text(newValue);
+      }
+      else {
+        $cell.text(initialValue); // Restore initial value
+      }
+    });
+  });
+});
+</script>
+
+ 
+ @section scripts {
+  @* <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script> *@
+  <script src="~/js/main.js"></script>
+}

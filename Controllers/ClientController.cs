@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using DizonCoop.Entities;
+using DizonCoop.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,24 +17,83 @@ namespace DizonCoop.Controllers
         public ClientController(DizonCoopContext client)
         {
             _context = client;
+
         }
 
         public IActionResult Index()
         {
-           
+            ViewData["types"] =  _context.UserTypes.ToList();
+            ViewData["clientinfo"] = _context.ClientInfos.ToList();
             return View();
-
-
-            
         }
+
+        [HttpPost]
+        public ActionResult Create(ClientInfoViewModel clientinfo){
+
+            if(!ModelState.IsValid)
+            return View(clientinfo);
+
+            ClientInfo c = new ClientInfo
+            {
+                Id = clientinfo.Id,
+                Usertype = clientinfo.Usertype,
+                FirstName = clientinfo.FirstName,
+                MiddleName = clientinfo.MiddleName,
+                LastName = clientinfo.LastName,
+                Address = clientinfo.Address,
+                ZipCode = clientinfo.ZipCode,
+                BirthDate = clientinfo.BirthDate,
+                Age = clientinfo.Age,
+                NameOfFather = clientinfo.NameOfFather,
+                NameOfMother = clientinfo.NameOfMother,
+                CivilStatus = clientinfo.CivilStatus,
+                Relgion = clientinfo.Relgion,
+                Occupation = clientinfo.Occupation
+            };
+
+            _context.ClientInfos.Add(c);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            var client = _context.ClientInfos
+                            .Where(q => q.Id == id )
+                            .Select(s => new ClientInfoViewModel {
+                                Id = s.Id,
+                                Usertype = s.Usertype,
+                                FirstName = s.FirstName,
+                                MiddleName = s.MiddleName,
+                                LastName = s.LastName,
+                                Address = s.Address,
+                                ZipCode = s.ZipCode,
+                                BirthDate = s.BirthDate,
+                                Age = s.Age,
+                                NameOfFather = s.NameOfFather,
+                                NameOfMother = s.NameOfMother,
+                                CivilStatus = s.CivilStatus,
+                                Relgion = s.Relgion,
+                                Occupation = s.Occupation
+                            })
+                            .FirstOrDefault();
+            return View(client);
+        }
+
+        public ActionResult ModalUpdate(){
+            return PartialView("partial/_ModalUpdate");
+        }
+
         public ActionResult ModalCreate(){
-            return PartialView("partials/_ModalCreate");
+            return PartialView("partial/_ModalCreate");
         }
 
         public ActionResult Table(){
 
-            var client = _context.ClientInfos.ToList();
-            return PartialView("partials/_PartialTable", client);
+            
+            return PartialView("partial/_PartialTable");
         }
 
     }

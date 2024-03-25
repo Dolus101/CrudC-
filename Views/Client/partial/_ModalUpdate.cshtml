@@ -1,6 +1,7 @@
-@model DizonCoop.Entities.ClientInfo
+@model DizonCoop.Models.ClientInfoViewModel
 
-<div class="modal fade " id="Addclient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form asp-action="Update" method="post">
+<div class="modal fade " id="Editclient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-md modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header bg-dark">
@@ -8,7 +9,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form class="row" asp-action="Create" method="post">
+        <div class="row">
           <div class="form-group col-6">
             <label asp-for="FirstName"></label>
             <input type="text" asp-for="FirstName" class="form-control"/>
@@ -29,11 +30,13 @@
 
           <div class="form-group col-6">
             <label asp-for="Usertype"></label>
-            <select class="form-select form-select-md" aria-label="Large select example">
+            <select asp-for="Usertype" class="form-select form-select-md" aria-label="Large select example">
               <option selected>Select UserType</option>
-              <option value="1">Admin</option>
-              <option value="2">Client</option>
-            </select>
+                                @foreach (var type in (IEnumerable<DizonCoop.Entities.UserType>)ViewData["types"])
+                {
+                    <option value="@type.Id">@type.Name</option>
+                }
+               </select>
           </div>
 
           <div class="form-group col-6">
@@ -90,12 +93,13 @@
             <span asp-validation-for="Occupation" class="text-danger"></span>
           </div>
           
-        </form>
+        
          <br>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+</form>

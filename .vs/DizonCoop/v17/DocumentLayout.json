@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\views\\client\\partial\\_partialtable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:views\\client\\partial\\_partialtable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\views\\client\\partial\\_modalcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:views\\client\\partial\\_modalcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\models\\clientinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:models\\clientinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|c:\\users\\nicole franz dizon\\onedrive\\documents\\dizoncoop\\entities\\clientinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AF7FD3D-B104-4E6F-9CC8-419440ACCE4B}|DizonCoop.csproj|solutionrelative:entities\\clientinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientInfoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Models\\ClientInfoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ClientInfoViewModel.cs",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Models\\ClientInfoViewModel.cs",
+              "RelativeToolTip": "Models\\ClientInfoViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T06:35:32.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClientInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Entities\\ClientInfo.cs",
+              "RelativeDocumentMoniker": "Entities\\ClientInfo.cs",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Entities\\ClientInfo.cs",
+              "RelativeToolTip": "Entities\\ClientInfo.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwBIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T06:22:58.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Views\\Client\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-25T06:16:06.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_PartialTable.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\partial\\_PartialTable.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\partial\\_PartialTable.cshtml",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\partial\\_PartialTable.cshtml",
+              "RelativeToolTip": "Views\\Client\\partial\\_PartialTable.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-25T03:17:45.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ModalCreate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\partial\\_ModalCreate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Client\\partial\\_ModalCreate.cshtml",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Views\\Client\\partial\\_ModalCreate.cshtml",
+              "RelativeToolTip": "Views\\Client\\partial\\_ModalCreate.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T16:03:20.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\Nicole Franz Dizon\\OneDrive\\Documents\\DizonCoop\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Controllers\\ClientController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T16:02:54.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+@model DizonCoop.Models.ClientInfoViewModel
+
+<form asp-action="Create" method="post">
+<div class="modal fade " id="Addclient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Add Client</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="form-group col-6">
+            <label asp-for="FirstName"></label>
+            <input type="text" asp-for="FirstName" class="form-control"/>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+          </div>
+          
+          <div class="form-group col-6">
+            <label asp-for="MiddleName"></label>
+            <input type="text" asp-for="MiddleName" class="form-control"/>
+            <span asp-validation-for="MiddleName" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="LastName"></label>
+            <input type="text" asp-for="LastName" class="form-control"/>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="Usertype"></label>
+            <select asp-for="Usertype" class="form-select form-select-md" aria-label="Large select example">
+              <option selected>Select UserType</option>
+                                @foreach (var type in (IEnumerable<DizonCoop.Entities.UserType>)ViewData["types"])
+                {
+                    <option value="@type.Id">@type.Name</option>
+                }
+               </select>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="Address"></label>
+            <input type="text" asp-for="Address" class="form-control"/>
+            <span asp-validation-for="Address" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="ZipCode"></label>
+            <input type="number" asp-for="ZipCode" class="form-control"/>
+            <span asp-validation-for="ZipCode" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="BirthDate"></label>
+            <input type="date" asp-for="BirthDate" class="form-control"/>
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="Age"></label>
+            <input type="number" asp-for="Age" class="form-control"/>
+            <span asp-validation-for="Age" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="NameOfFather"></label>
+            <input type="text" asp-for="NameOfFather" class="form-control"/>
+            <span asp-validation-for="NameOfFather" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="NameOfMother"></label>
+            <input type="text" asp-for="NameOfMother" class="form-control"/>
+            <span asp-validation-for="NameOfMother" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="CivilStatus"></label>
+            <input type="text" asp-for="CivilStatus" class="form-control"/>
+            <span asp-validation-for="CivilStatus" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="Relgion"></label>
+            <input type="text" asp-for="Relgion" class="form-control"/>
+            <span asp-validation-for="Relgion" class="text-danger"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label asp-for="Occupation"></label>
+            <input type="text" asp-for="Occupation" class="form-control"/>
+            <span asp-validation-for="Occupation" class="text-danger"></span>
+          </div>
+          
+        
+         <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

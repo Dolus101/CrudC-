@@ -1,4 +1,3 @@
-@model List<DizonCoop.Entities.ClientInfo>
 
 
 <table id="example" class="table table-striped" style="width:100%">
@@ -14,19 +13,21 @@
     </tr>
   </thead>
   <tbody>
+     @foreach (var client in (IEnumerable<DizonCoop.Entities.ClientInfo>)ViewData["clientinfo"]) {
     <tr>
-      <td>1</td>
-      <td>Nicole Franz Dizon</td>
-      <td>07/26/2001</td>
-      <td>22</td>
-      <td>Single</td>
-      <td>Admin</td>
+      <td>@client.Id</td>
+      <td>@client.FirstName @client.LastName</td>
+      <td>@client.BirthDate</td>
+      <td>@client.Age</td>
+      <td>@client.CivilStatus</td>
+      <td>@client.Usertype</td>
       <td>
         <input type="button" value="View" class="btn btn-primary">
-        <input type="button" value="Edit" class="btn btn-warning">
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Editclient@client.Id"> Edit </button>
         <input type="button" value="Delete" class="btn btn-danger">
       </td>
     </tr>
+     }
   </tbody>
   <tfoot class="bg-dark">
     <tr class="text-white">
