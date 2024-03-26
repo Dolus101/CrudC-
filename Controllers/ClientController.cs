@@ -57,30 +57,94 @@ namespace DizonCoop.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public ActionResult Update(int id)
-        {
-            var client = _context.ClientInfos
-                            .Where(q => q.Id == id )
-                            .Select(s => new ClientInfoViewModel {
-                                Id = s.Id,
-                                Usertype = s.Usertype,
-                                FirstName = s.FirstName,
-                                MiddleName = s.MiddleName,
-                                LastName = s.LastName,
-                                Address = s.Address,
-                                ZipCode = s.ZipCode,
-                                BirthDate = s.BirthDate,
-                                Age = s.Age,
-                                NameOfFather = s.NameOfFather,
-                                NameOfMother = s.NameOfMother,
-                                CivilStatus = s.CivilStatus,
-                                Relgion = s.Relgion,
-                                Occupation = s.Occupation
-                            })
-                            .FirstOrDefault();
-            return View(client);
+                [HttpPost]
+        public ActionResult Edit(ClientInfoViewModel clientinfo){
+
+            if(!ModelState.IsValid)
+            return View(clientinfo);
+
+            ClientInfo s = new ClientInfo
+            {
+                Id = clientinfo.Id,
+                Usertype = clientinfo.Usertype,
+                FirstName = clientinfo.FirstName,
+                MiddleName = clientinfo.MiddleName,
+                LastName = clientinfo.LastName,
+                Address = clientinfo.Address,
+                ZipCode = clientinfo.ZipCode,
+                BirthDate = clientinfo.BirthDate,
+                Age = clientinfo.Age,
+                NameOfFather = clientinfo.NameOfFather,
+                NameOfMother = clientinfo.NameOfMother,
+                CivilStatus = clientinfo.CivilStatus,
+                Relgion = clientinfo.Relgion,
+                Occupation = clientinfo.Occupation
+            };
+
+            _context.ClientInfos.Update(s);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
+
+
+
+
+
+        // [HttpGet]
+        // public ActionResult Update(int id)
+        // {
+        //     var client = _context.ClientInfos
+        //                     .Where(q => q.Id == id )
+        //                     .Select(s => new ClientInfoViewModel {
+        //                         Id = s.Id,
+        //                         Usertype = s.Usertype,
+        //                         FirstName = s.FirstName,
+        //                         MiddleName = s.MiddleName,
+        //                         LastName = s.LastName,
+        //                         Address = s.Address,
+        //                         ZipCode = s.ZipCode,
+        //                         BirthDate = s.BirthDate,
+        //                         Age = s.Age,
+        //                         NameOfFather = s.NameOfFather,
+        //                         NameOfMother = s.NameOfMother,
+        //                         CivilStatus = s.CivilStatus,
+        //                         Relgion = s.Relgion,
+        //                         Occupation = s.Occupation
+        //                     })
+        //                     .FirstOrDefault();
+        //     return RedirectToAction("Index");
+        // }
+
+        // [HttpPost]
+        // public ActionResult Update(ClientInfoViewModel clientinfo) {
+
+        //     if(!ModelState.IsValid)
+        //     return View(clientinfo);
+
+        //     ClientInfo c = new ClientInfo
+        //     {
+        //         Id = clientinfo.Id,
+        //         Usertype = clientinfo.Usertype,
+        //         FirstName = clientinfo.FirstName,
+        //         MiddleName = clientinfo.MiddleName,
+        //         LastName = clientinfo.LastName,
+        //         Address = clientinfo.Address,
+        //         ZipCode = clientinfo.ZipCode,
+        //         BirthDate = clientinfo.BirthDate,
+        //         Age = clientinfo.Age,
+        //         NameOfFather = clientinfo.NameOfFather,
+        //         NameOfMother = clientinfo.NameOfMother,
+        //         CivilStatus = clientinfo.CivilStatus,
+        //         Relgion = clientinfo.Relgion,
+        //         Occupation = clientinfo.Occupation
+        //     };
+
+        //     _context.ClientInfos.Update(c);
+        //     _context.SaveChanges();
+
+        //     return RedirectToAction("Index");
+        // }
 
         public ActionResult ModalUpdate(){
             return PartialView("partial/_ModalUpdate");
@@ -95,6 +159,15 @@ namespace DizonCoop.Controllers
             
             return PartialView("partial/_PartialTable");
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id) {
+            var client = _context.ClientInfos.Where( q => q.Id == id).FirstOrDefault();
+            _context.ClientInfos.Remove(client);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

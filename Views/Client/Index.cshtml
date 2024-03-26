@@ -1,18 +1,19 @@
 
 <link href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
 <h3>Client List</h3>
 
 <br>
 <!-- btn open modal add client -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Addclient"> Add Client </button>
-
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddClient"> Add Client </button>
+@* <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#E"> Edit </button> *@
 <!-- Client add Modal -->
 
 <!-- Modal add client close -->
 @Html.Partial("partial/_PartialTable")
 @Html.Partial("partial/_ModalCreate")
-@Html.Partial("partial/_ModalUpdate")
+
+
 
 
 

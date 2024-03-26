@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
 namespace DizonCoop.Entities;
 
@@ -10,13 +8,13 @@ public partial class ClientInfo
     public int Id { get; set; }
 
     public int? Usertype { get; set; }
-    
+
     public string? FirstName { get; set; }
-    
+
     public string? MiddleName { get; set; }
 
     public string? LastName { get; set; }
-    
+
     public string? Address { get; set; }
 
     public int? ZipCode { get; set; }
