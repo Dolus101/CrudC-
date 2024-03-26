@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DizonCoop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3774a950d0c230edf165c584a946210b403c6ddf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2555eb820be51dee1ebeed185bba8c6b4cad891f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DizonCoop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DizonCoop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

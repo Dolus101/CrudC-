@@ -6,17 +6,16 @@
 
 @model DizonCoop.Models.ClientInfoViewModel
 
-<form asp-action="Edit/4" method="post">
-@* <div class="modal fade" id="Editclient_client.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form asp-action="Create" method="post">
+<div class="modal fade" id="Editclient_client.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-md modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header bg-dark">
         <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Add Client</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body"> *@
+      <div class="modal-body">
         <div class="row">
-             <input type="hidden" asp-for="Id" />
           <div class="form-group col-6">
             <label asp-for="FirstName"></label>
             <input type="text" asp-for="FirstName" class="form-control" value=""/>
@@ -107,8 +106,8 @@
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </div>
-  @* </div>
+  </div>
 </div>
   </div>
-  </div> *@
+  </div>
 </form>
