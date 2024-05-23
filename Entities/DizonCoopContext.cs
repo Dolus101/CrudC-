@@ -17,6 +17,8 @@ public partial class DizonCoopContext : DbContext
 
     public virtual DbSet<ClientInfo> ClientInfos { get; set; }
 
+    public virtual DbSet<Loan> Loans { get; set; }
+
     public virtual DbSet<UserType> UserTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -59,6 +61,36 @@ public partial class DizonCoopContext : DbContext
             entity.Property(e => e.Relgion)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Loan>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__loan__3213E83F528C9E43");
+
+            entity.ToTable("loan");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Amount).HasColumnName("amount");
+            entity.Property(e => e.ClientId).HasColumnName("client_id");
+            entity.Property(e => e.DateCreated)
+                .HasColumnType("date")
+                .HasColumnName("date_created");
+            entity.Property(e => e.Deduction).HasColumnName("deduction");
+            entity.Property(e => e.DueDate)
+                .HasColumnType("date")
+                .HasColumnName("due_date");
+            entity.Property(e => e.Interest).HasColumnName("interest");
+            entity.Property(e => e.NoPayment).HasColumnName("no_payment");
+            entity.Property(e => e.Penalty).HasColumnName("penalty");
+            entity.Property(e => e.RecievableAmount).HasColumnName("recievable_amount");
+            entity.Property(e => e.Status)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("status");
+            entity.Property(e => e.Type)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("type");
         });
 
         modelBuilder.Entity<UserType>(entity =>

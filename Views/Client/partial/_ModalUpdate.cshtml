@@ -1,102 +1,84 @@
-
-
-
-@* WLA NI SIYAY GAMIT *@
-@* COPY RANI SIYA SA EDIT *@
-
-@model DizonCoop.Models.ClientInfoViewModel
-
-<form asp-action="Create" method="post">
-<div class="modal fade" id="Editclient_client.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Editclient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <form asp-action="Edit" method="post">
   <div class="modal-dialog modal-md modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header bg-dark">
-        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Add Client</h1>
+        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Update Client</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="row">
+
           <div class="form-group col-6">
-            <label asp-for="FirstName"></label>
-            <input type="text" asp-for="FirstName" class="form-control" value=""/>
-            <span asp-validation-for="FirstName" class="text-danger"></span>
+             <label for="form-label">First Name</label>
+            <input type="text" class="form-control" value=""/>
           </div>
           
           <div class="form-group col-6">
-            <label asp-for="MiddleName"></label>
-            <input type="text" asp-for="MiddleName" class="form-control" value=""/>
-            <span asp-validation-for="MiddleName" class="text-danger"></span>
+            <label for="form-label">Middle Name</label>
+            <input type="text" class="form-control" value=""/>
+
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="LastName"></label>
-            <input type="text" asp-for="LastName" class="form-control" value=""/>
-            <span asp-validation-for="LastName" class="text-danger"></span>
+            <label for="form-label">Last Name</label>
+            <input type="text" class="form-control" value=""/>
           </div>
 
-          <div class="form-group col-6">
-            <label asp-for="Usertype"></label>
-            <select asp-for="Usertype" class="form-select form-select-md" aria-label="Large select example" value="">
-              <option selected>Select UserType</option>
+          @* <div class="form-group col-6">
+            <label for="form-label">User Type</label>
+            <select class="form-select form-select-md" aria-label="Large select example" > 
+               <option selected value="">Select UserType</option> 
                                 @foreach (var type in (IEnumerable<DizonCoop.Entities.UserType>)ViewData["types"])
                 {
-                    <option value="@type.Id">@type.Name</option>
+                    <option selected value="@type.Id">@type.Name</option>
                 }
                </select>
+          </div> *@
+
+          <div class="form-group col-6">
+            <label for="form-label">Address</label>
+            <input type="text" class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="Address"></label>
-            <input type="text" asp-for="Address" class="form-control" value=""/>
-            <span asp-validation-for="Address" class="text-danger"></span>
+            <label for="form-label">Zip Code</label>
+            <input type="number" class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="ZipCode"></label>
-            <input type="number" asp-for="ZipCode" class="form-control" value=""/>
-            <span asp-validation-for="ZipCode" class="text-danger"></span>
+            <label for="form-label">Birth Date</label>
+            <input type="date" class="form-control" value=""/>n>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="BirthDate"></label>
-            <input type="date" asp-for="BirthDate" class="form-control" value=""/>
-            <span asp-validation-for="BirthDate" class="text-danger"></span>
+            <label for="form-label">Age</label>
+            <input type="number"  class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="Age"></label>
-            <input type="number" asp-for="Age" class="form-control" value=""/>
-            <span asp-validation-for="Age" class="text-danger"></span>
+            <label for="form-label">Name of Father</label>
+            <input type="text" class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="NameOfFather"></label>
-            <input type="text" asp-for="NameOfFather" class="form-control" value=""/>
-            <span asp-validation-for="NameOfFather" class="text-danger"></span>
+            <label for="form-label">Name of Mother</label>
+            <input type="text" class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="NameOfMother"></label>
-            <input type="text" asp-for="NameOfMother" class="form-control" value=""/>
-            <span asp-validation-for="NameOfMother" class="text-danger"></span>
+            <label for="form-label">Civil Status</label>
+            <input type="text"  class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="CivilStatus"></label>
-            <input type="text" asp-for="CivilStatus" class="form-control" value=""/>
-            <span asp-validation-for="CivilStatus" class="text-danger"></span>
+            <label for="form-label">Religion</label>
+            <input type="text"  class="form-control" value=""/>
           </div>
 
           <div class="form-group col-6">
-            <label asp-for="Relgion"></label>
-            <input type="text" asp-for="Relgion" class="form-control" value=""/>
-            <span asp-validation-for="Relgion" class="text-danger"></span>
-          </div>
-
-          <div class="form-group col-6">
-            <label asp-for="Occupation"></label>
-            <input type="text" asp-for="Occupation" class="form-control" value=""/>
-            <span asp-validation-for="Occupation" class="text-danger"></span>
+            <label for="form-label">Occupation</label>
+            <input type="text" class="form-control" value=""/>
           </div>
           
         
@@ -108,6 +90,129 @@
     </div>
   </div>
 </div>
-  </div>
-  </div>
+</div>
 </form>
+</div>  
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    var clients;
+    var clientIdToUpdate;
+
+    $(document).ready(function () {
+
+        load();
+
+        @* $("#submitClient").click(function (e) {
+            e.preventDefault();
+            var fnameValue = document.querySelector("input#firstname").value;
+            var lnameValue = document.querySelector("input#lastname").value;
+            var addressValue = document.querySelector("input#address").value;
+
+            $.ajax({
+                url: 'http://localhost:5093/clientapi2/createclient',
+                method: "POST",
+                data: {
+                    firstName: fnameValue,
+                    lastName: lnameValue,
+                    address: addressValue
+                }
+            })
+            .done(function () {
+                load();
+            })
+            .fail(function (res) {
+                alert(res);
+            });
+        }); *@
+
+        $(".delete-items").click(function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: 'http://localhost:5093/clientapi2/DeleteSomeClients',
+            })
+            .done(function () {
+                load();
+            })
+            .fail(function (res) {
+                alert(res);
+            });
+        });
+
+        $("#updateButton").click(function (e) {
+            e.preventDefault();
+
+            console.log("Iwasclicked")
+           
+        });
+
+        $("#submitUpdateClient").click(function (e) {
+            e.preventDefault();
+            var fnameValue = document.querySelector("input#updatefirstname").value;
+            var lnameValue = document.querySelector("input#updatelastname").value;
+            var addressValue = document.querySelector("input#updateaddress").value;
+
+            $.ajax({
+                url: 'http://localhost:5093/clientapi2/updateclient',
+                method: "POST",
+                data: {
+                    id : clientIdToUpdate,
+                    clientInfo : {
+                        id : clientIdToUpdate,
+                        FirstName: fnameValue,
+                        LastName: lnameValue,
+                        Address: addressValue
+                    }
+                }
+            })
+            .done(function () {
+                load();
+            })
+            .fail(function (res) {
+                alert(res);
+            });
+        });
+
+        $(document).on("click", "#updateButton", function (e) {
+            e.preventDefault();
+
+            console.log("Iwasclicked2222222")
+
+            var selectedID = $(this).attr("data-clientid");
+            clientIdToUpdate = selectedID;
+            $("#updatefirstname").val(clients[selectedID].firstName);
+            $("#updatelastname").val(clients[selectedID].lastName);
+            $("#updateaddress").val(clients[selectedID].address);
+
+            console.table(clients[selectedID]);
+
+
+
+        })
+
+    @* $(".append-button").click(function () {
+            var template = document.querySelector(".client-card-template");
+            var parent = document.querySelector(".client-container");
+            var clone = template.content.cloneNode(true);
+            parent.append(clone);
+            }); *@
+
+
+
+    });
+
+
+
+
+
+    @* $("h1").click(function () {
+        if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        } else {
+        $(this).addClass("selected");
+        }
+        }) *@
+
+</script>

@@ -1,63 +1,52 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DizonCoop.Models
 {
-    public class ClientInfoViewModel
+public class ClientInfoViewModel
     {
         public int Id { get; set; }
-
-        [DisplayName("Pick User Type")]
-        [Required]
+        // [Required]
         public int? Usertype { get; set; }
+        public string UsertypeName { get; set; } = "";
 
-        [DisplayName("Enter Frist Name")]
-        [Required]
+        // [Required]
         public string? FirstName { get; set; }
 
-        [DisplayName("Enter Middle Name")]
-
+        // [Required]
         public string? MiddleName { get; set; }
 
-        [DisplayName("Enter Last Name")]
-        [Required]
+        // [Required]
         public string? LastName { get; set; }
 
-        [DisplayName("Enter Address")]
-        [Required]
+        // [Required]
         public string? Address { get; set; }
 
-        [DisplayName("Enter Zip Code")]
-        [Required]
+        // [Required]
         public int? ZipCode { get; set; }
 
-        [DisplayName("Enter Birthdate")]
-        //[Required]
+        // [Required]
         public DateTime? BirthDate { get; set; }
 
-        [DisplayName("Enter Age")]
-        [Required]
+        // [Required]
         public int? Age { get; set; }
 
-        [DisplayName("Enter Name Of Father")]
-        [Required]
+        // [Required]
         public string? NameOfFather { get; set; }
 
-        [DisplayName("Enter Name Of Mother")]
-        [Required]
+        // [Required]
         public string? NameOfMother { get; set; }
 
-        [DisplayName("Enter Civil Status")]
-        [Required]
+        // [Required]
         public string? CivilStatus { get; set; }
 
-        [DisplayName("Enter Relgion")]
-        [Required]
+        // [Required]
         public string? Relgion { get; set; }
 
-        [DisplayName("Enter Occupation")]
-        [Required]
+        // [Required]
         public string? Occupation { get; set; }
     }
 }
-

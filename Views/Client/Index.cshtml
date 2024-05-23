@@ -1,17 +1,57 @@
+@* @model IEnumerable<DizonCoop.Models.ClientInfoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+} *@
 
 <link href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css" rel="stylesheet">
 
-<h3>Client List</h3>
+@* <h3>Client List</h3>
 
 <br>
+<table id="example" class="table table-striped" style="width:100%">
+  <thead class="bg-dark">
+    <tr class="text-white">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Age</th>
+      <th>Civil Status</th>
+      <th>User type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+@foreach (var item in Model){
+    <tr>
+      
+      <td>@Html.DisplayFor(modelItem  => item.Id)</td>
+      <td>@Html.DisplayFor(modelItem  => item.FirstName)@Html.DisplayFor(modelItem => item.LastName)</td>
+      <td>@Html.DisplayFor(modelItem  => item.BirthDate)</td>
+      <td>@Html.DisplayFor(modelItem  => item.Age)</td>
+      <td>@Html.DisplayFor(modelItem  => item.CivilStatus)</td>
+      <td>@Html.DisplayFor(modelItem  => item.UsertypeName)</td>
+      
+    
+      <td>
+         <a href="#" class="btn btn-primary" id="updateButton" data-bs-toggle="modal" data-bs-target="#updateClientModal" data-VIEW="" >View</a>
+         <a href="#" class="btn btn-warning" id="updateButton" data-bs-toggle="modal" data-bs-target="#updateClientModal" data-UPDATECLIENT="" >update</a>
+        <a href="/Client/Delete/@Html.DisplayNameFor(model => model.Id)" class="btn btn-danger"> Delete </a>
+      </td>
+      
+    </tr>
+    }
+  </tbody>
+  </table> *@
 <!-- btn open modal add client -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddClient"> Add Client </button>
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddClient"> Add Client </button>-->
 @* <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#E"> Edit </button> *@
 <!-- Client add Modal -->
 
 <!-- Modal add client close -->
-@Html.Partial("partial/_PartialTable")
-@Html.Partial("partial/_ModalCreate")
+
+@Html.Partial("partial/_PartialTable");
+
 
 
 
